@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PocketLLM</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%232f45ff%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%276%27 fill=%27%231fcf7a%27/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>PocketLLM</h1>
+      <span id="status" class="status" role="status" aria-live="polite">Starting…</span>
+    </header>
+
+    <div id="progress-wrap" class="progress-wrap" hidden>
+      <div id="progress-bar" class="progress-bar"></div>
+      <p id="progress-text" class="progress-text"></p>
+    </div>
+
+    <div id="error" class="error" role="alert" hidden>
+      <span id="error-text"></span>
+      <button id="retry-btn" type="button" hidden>Retry</button>
+    </div>
+
+    <section id="messages" class="messages" aria-live="polite">
+      <p class="empty">Your model is warming up. When the light turns green, ask it anything.</p>
+    </section>
+
+    <form id="chat-form" class="composer" autocomplete="off">
+      <textarea id="prompt" rows="2" placeholder="Ask anything. Enter sends, Shift+Enter adds a line." disabled></textarea>
+      <div class="buttons">
+        <button id="send-btn" type="submit" disabled>Send</button>
+        <button id="stop-btn" type="button" hidden>Stop</button>
+        <button id="clear-btn" type="button">Clear chat</button>
+      </div>
+    </form>
+
+    <footer class="note">
+      Runs in your browser via WebLLM. Chat text stays on your device; the model downloads once
+      and is cached. Answers can be wrong, and quality/speed depend on the model and your hardware.
+    </footer>
+  </main>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
