@@ -66,13 +66,9 @@ flowchart LR
 PocketLLM is plain HTML, CSS and JavaScript, so there is nothing to install or build. It only needs to be served over **http://localhost** or **https** (ES modules and WebGPU don't work from `file://`).
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/pocketllm.git
+git clone https://Hashim-stack/PocketLLM/.git
 cd pocketllm
-
-# pick any static server:
-python3 -m http.server 8000
-# or: npx serve .
-# or: VS Code "Live Server" extension
+VS Code "Live Server" extension
 ```
 
 Open <http://localhost:8000> in a recent desktop **Chrome or Edge**, wait for the light to turn green, and say hello.
