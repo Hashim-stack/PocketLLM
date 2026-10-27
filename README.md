@@ -15,6 +15,7 @@ No server. No API key. No sign-up. Your messages never leave your device.
 
 </div>
 
+
 <!-- Add a screenshot or GIF here once you have one:
 ![PocketLLM screenshot](docs/screenshot.png)
 -->
